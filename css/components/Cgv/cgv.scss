@@ -1,0 +1,27 @@
+#cgv {
+    padding: 60px 8% 0;
+    border: none;
+
+    .cgv-header {
+        margin-bottom: 60px;
+    }
+}
+
+.cgv-container {
+    .cgv-content {
+        text-align: justify;
+        text-justify: inter-word;
+        margin-bottom: 60px;
+    }
+
+    .cgv-title {
+        font-size: 25px!important;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+    
+    .cgv-content-title {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+}

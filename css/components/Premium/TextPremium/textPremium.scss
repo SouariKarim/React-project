@@ -1,0 +1,17 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.content-premium {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.hidden-no-premium {
+  color: $true-grey-text-color;
+  font-weight: 300;
+
+  .button-upgrade {
+    color: $true-grey-text-color;
+    font-weight: normal;
+  }
+}

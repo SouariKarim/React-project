@@ -1,0 +1,209 @@
+@import 'src/theme-jean-michel/theme-jean-michel-colors';
+
+
+.trouvetou{
+  .text-title{
+    margin: 80px 0 0;
+  }
+
+  .popular-query{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+.komen{
+  .about-keys{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 60px;
+  }
+
+  .about-freelances{
+    background-color: $white;
+    border: 20px solid $gray;
+    border-radius: 40px;
+    padding: 60px 30px;
+
+    .icon{
+      max-width: 130px;
+      width: 85%;
+      height: auto;
+      color: $black;
+    }
+
+    .list{
+      margin: 0;
+      padding: 0 0 0 20px;
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba($black, 0.8);
+      list-style-type: none;
+
+      li:before {
+        content: '\2714';
+        margin-left: -20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.stats{
+  .stat-item{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img{
+      margin-top: 30px;
+      width: 75%;
+      max-width: 500px;
+      height: auto;
+    }
+  }
+}
+
+.temoin{
+  .temoignage-container{
+    margin: 60px 0 0;
+
+    .left-side {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 5% 0 0;
+
+      .temoin-sub{
+        line-height: 40px;
+        font-size: 28px;
+      }
+
+      .review {
+        .stars {
+          margin-right: 8px;
+          color: $stars;
+        }
+
+        p{
+          color: rgba($black, 0.8);
+        }
+      }
+    }
+
+    .right-side{
+      padding: 15px;
+      border: 20px solid $gray;
+      border-radius: 40px;
+    }
+  }
+}
+
+.kestion{
+  .kestion-container{
+    margin-top: 40px;
+
+    .kestion-col{
+      padding-right: 5%;
+
+      h6{
+        margin: 60px 0 20px;
+        color: $orange;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      p{
+        color: $white;
+        text-align: justify;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        span{
+          cursor: pointer;
+          text-decoration: underline;
+
+          &:hover{
+            color: $yellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .temoin{
+    .temoignage-container {
+      .left-side {
+        padding: 0;
+
+        .temoin-sub{
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .komen{
+    .about-freelances{
+      .icon-col{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+
+      .text-title{
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .trouvetou {
+    h3 {
+      font-size: 20px;
+    }
+
+    .popular-query{
+      font-size: 14px;
+
+      span{
+        a{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .komen{
+    .about-freelances{
+      padding: 40px 15px;
+
+      .list{
+        font-size: 14px;
+      }
+    }
+  }
+
+  .temoin{
+    .temoignage-container {
+      .left-side {
+
+        .temoin-sub{
+          line-height: 25px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

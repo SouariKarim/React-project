@@ -1,0 +1,111 @@
+@import "../../theme-jean-michel/theme-jean-michel";
+
+.search {
+  width: 100%;
+  position: relative;
+
+  .show-more {
+    text-align: center;
+
+    button {
+      margin: 15px 0;
+    }
+
+    p {
+      opacity: 0.85;
+      font-size: 16px;
+      text-align: center;
+
+      span {
+        font-weight: 700;
+        color: $orange;
+      }
+    }
+  }
+
+  .custom-control-label {
+    color: $grey-text-color;
+  }
+
+  .euro-symbol {
+    .input-range__label-container {
+      &:after {
+        content: "€";
+      }
+    }
+  }
+
+  .input-range__label-container {
+    //color:red;
+    font-family: Roboto, sans-serif !important;
+    font-size: small;
+  }
+
+  .input-range__label--min, .input-range__label--max {
+    display: none;
+  }
+
+  .card {
+    border: none;
+  }
+
+  .loading-wrapper {
+    width: 100%;
+    z-index: 10;
+    background-color: $body-bg;
+
+    .jm-spinner {
+      margin-top: 0;
+    }
+  }
+
+  .search-loader {
+    text-align: center;
+
+    .icon {
+      width: 50px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    section {
+      text-transform: uppercase;
+      font-weight: bolder;
+      color: $grey-text-color;
+    }
+  }
+
+  .search-state {
+    width: 100%;
+    min-height: 130px;
+    margin-top: 30px;
+
+    .search-informations {
+      text-align: center;
+
+      .icon {
+        width: 50px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      section {
+        color: $dark;
+        text-transform: uppercase;
+        font-weight: bolder;
+        padding: 0 20px;
+
+        .nb-freelances {
+          margin-right: 10px;
+          width: max-content;
+          background-color: $transparent;
+          border: 2px solid $dark;
+          color: $dark;
+          padding: 1px 10px;
+          border-radius: $default-border-radius;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

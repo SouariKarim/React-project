@@ -1,0 +1,76 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.btn{
+  background-color: rgba(0,0,0,0);
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 100%;
+  padding: 6px 10px;
+  transition: background-color 250ms;
+  cursor: pointer;
+  position: relative;
+  z-index: 17;
+
+  &.dark{
+    .s1,.s2,.s3{
+      border: 1px solid $white;
+      background-color: $white;
+    }
+  }
+
+  .s1,.s2,.s3{
+    border: 1px solid $black;
+    margin: 2.5px 0;
+    transition: all 200ms;
+    background-color: $black;
+  }
+
+  .s1{
+    width: 100%;
+  }
+
+  .s2{
+    width: 100%;
+  }
+
+  .s3{
+    width: 100%;
+  }
+
+  &.active{
+    .s1{
+      width: 100%;
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .s2{
+      opacity: 0;
+    }
+
+    .s3{
+      width: 100%;
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+
+  &:hover {
+    background-color: rgba($yellow, 0.7);
+
+    .s1{
+      width: 100%;
+    }
+
+    .s2{
+      width: 80%;
+    }
+
+    .s3{
+      width: 60%;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import 'src/theme-jean-michel/theme-jean-michel-colors';
+
+
+.freelance-profile-picture {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border: 1px solid $gray;
+  object-fit: cover;
+
+  &.from-search-page{
+    border-radius: 6px;
+  }
+
+  & {
+    width: 100%;
+    max-width: 276px;
+    max-height: 276px;
+
+    @media (max-width: 768px) {
+      margin-top: 1rem;
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+
+  &.hover {
+    cursor: pointer;
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}

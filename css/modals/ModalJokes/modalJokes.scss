@@ -1,0 +1,44 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.jokes{
+  text-align: center;
+  padding: 20px 7% 40px;
+
+  p{
+    margin: 0 0 5px;
+  }
+
+  .jokes-body{
+    position: relative;
+    height: 160px;
+    text-align: left;
+
+    .generator{
+      width: 100%;
+      background-color: rgba($gray, 0.9);
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid rgba($gray, 0.9);
+      text-align: center;
+    }
+
+    .answer{
+      margin-top: 10px;
+      background-color: $white;
+    }
+  }
+
+  .disclaimer{
+    font-size: 9px;
+    opacity: 0.6;
+    position: relative;
+    width: 100%;
+    left: 0;
+    bottom: -30px;
+    text-align: center;
+
+    span{
+      color: $orange;
+    }
+  }
+}

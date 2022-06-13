@@ -1,0 +1,32 @@
+@import "src/theme-jean-michel/theme-jean-michel-display";
+
+
+.scrollTop{
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: $default-border-radius;
+  background: linear-gradient(90deg, $orange, $yellow 51%, $yellow) 0 / 200%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 400ms, visibility 400ms, border-radius 400ms;
+  z-index: 500;
+  box-shadow: 0 0 20px rgba(black, 0.3);
+  cursor: pointer;
+
+  svg{
+    color: $white !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  &:hover{
+    transform: rotate(360deg);
+    border-radius: 100%;
+    background: linear-gradient(90deg, $orange, $yellow 51%, $yellow) 100% / 200%;
+  }
+}

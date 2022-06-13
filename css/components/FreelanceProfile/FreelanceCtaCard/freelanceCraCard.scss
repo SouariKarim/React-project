@@ -1,0 +1,26 @@
+@import "../../../theme-jean-michel/theme-jean-michel";
+
+.freelance-cta-card {
+  button {
+    min-width: 100%;
+    padding: 7px;
+  }
+
+  .see-more-button {
+    padding: 7px;
+    border: 1px solid #7e7e7e !important;
+    background-color: unset !important;
+    border-radius: $default-border-radius;
+    color: #7e7e7e !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+
+    &:focus {
+      box-shadow: none!important; //0 0 0 0.2rem rgba(#7e7e7e, 0.9) !important;
+    }
+  }
+
+  .dropdown-item:active {
+    background-color: #2C343F;
+  }
+}

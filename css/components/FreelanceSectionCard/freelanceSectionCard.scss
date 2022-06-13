@@ -1,0 +1,15 @@
+@import "../../theme-jean-michel/theme-jean-michel";
+
+.freelance-section-card {
+  padding: 20px 20px 20px 20px;
+  border-radius: $default-border-radius;
+
+  .card-body {
+    padding: 0;
+  }
+
+  .freelance-section-title {
+    font-size: 20px;
+    color: rgb(71, 71, 71);
+  }
+}

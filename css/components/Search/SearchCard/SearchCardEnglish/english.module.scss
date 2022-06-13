@@ -1,0 +1,51 @@
+@import "../../../../theme-jean-michel/theme-jean-michel";
+
+
+.select {
+  width: 200px;
+  color: $dark !important;
+
+  &.notDefault {
+    :global(.english-filter__single-value) {
+      color: $yellow;
+      font-weight: 500;
+    }
+  }
+
+  :global(.english-filter__control) {
+    cursor: pointer;
+    border: 1px solid $gray-unselected;
+    border-radius: $default-border-radius;
+    box-shadow: none;
+
+    &:hover {
+      border: 1px solid $dark-gray;
+    }
+  }
+
+  :global(.english-filter__indicator-separator) {
+    display: none;
+  }
+
+  :global(.english-filter__option--is-selected) {
+    background-color: $yellow !important;
+    color: $white !important;
+    font-weight: 500 !important;
+    cursor: auto !important;
+  }
+
+  :global(.english-filter__option--is-focused) {
+    background-color: rgba($yellow, 0.2);
+    font-weight: 400;
+    color: $dark;
+    cursor: pointer;
+  }
+
+  :global(.english-filter__indicator) {
+    color: $dark !important;
+  }
+
+  :global(.english-filter__single-value) {
+    color: $black;
+  }
+}

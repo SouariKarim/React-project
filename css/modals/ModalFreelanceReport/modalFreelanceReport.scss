@@ -1,0 +1,100 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.freelance-report-modal {
+  .modal-dialog {
+    max-width: 550px;
+  }
+
+  .report-about {
+    color: rgba($dark, 0.85);
+    font-size: 14px;
+    padding: 0 20px;
+    text-align: center;
+
+    span {
+      color: $orange;
+      font-weight: 500;
+    }
+  }
+
+  .report-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    margin: 0 30px;
+    position: relative;
+    border-top: 1px solid rgba($dark, 0.2);
+
+    label {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+
+      input {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      textarea {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 0.3rem;
+        border: 1px solid rgba($dark, 0.1);
+        padding: 15px;
+        min-height: 150px;
+
+        &::placeholder {
+          font-size: 14px;
+          color: rgba($dark, 0.7);
+        }
+      }
+    }
+
+    .actions{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+
+      .btn {
+        margin: 0 10px;
+      }
+
+      .loader{
+        width: 144px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        height: 40px;
+      }
+
+      p {
+        margin: 10px 0 0;
+        width: 100%;
+        font-size: 14px;
+        color: rgba($dark, 0.85);
+      }
+    }
+  }
+}
+
+.surprise-toast {
+  p {
+    margin: 0;
+
+    span {
+      color: $orange;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .report-form {
+    margin: 0 !important;
+    font-size: 14px;
+  }
+}

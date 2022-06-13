@@ -1,0 +1,36 @@
+@import 'src/theme-jean-michel/theme-jean-michel-colors';
+
+
+.icon-wrapper{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba($dark, 0.1);
+
+  svg, img{
+    width: 16px;
+    height: 16px;
+    margin: 0 3px 10px;
+    z-index: 1;
+  }
+
+  &.active{
+    color: $dark;
+  }
+
+  .info-popup{
+    position: absolute;
+    background-color: $white;
+    color: $dark;
+    font-size: 12px;
+    padding: 3px 10px;
+    bottom: -32px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba($black, 0.2);
+    z-index: 200;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,53 @@
+@import 'theme-jean-michel-colors';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&family=Permanent+Marker&display=swap');
+
+
+@font-face {
+  font-family: 'Futura';
+  src: url(../res/fonts/futura-bold-italic.ttf) format('truetype');
+}
+
+
+.font-futura {
+  font-family: Futura, sans-serif !important;
+  font-style: italic;
+}
+
+.font-market-notes {
+  font-family: 'Permanent Marker', sans-serif !important;
+}
+
+html, body, #root {
+  font-family: Roboto, sans-serif !important;
+  color: $primary-text-color;
+
+  a{
+    text-decoration: none !important;
+
+    &:hover{
+      text-decoration: none !important;
+    }
+  }
+
+  .font-xx-large {
+    font-size: xx-large !important;
+  }
+
+  .text-grey {
+    font-size: 14px;
+    color: $true-grey-text-color;
+  }
+
+  .text-strong {
+    color: black !important;
+    line-height: normal;
+  }
+}
+
+.icon {
+  color: $icon-default-color;
+}

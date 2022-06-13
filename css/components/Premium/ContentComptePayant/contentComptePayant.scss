@@ -1,0 +1,18 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+@import "src/theme-jean-michel/theme-jean-michel-font";
+
+.content-compte-payant{
+  text-align: center;
+  padding: 40px 7%;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid $freelance-grey;
+
+  p{
+    margin: 0 0 5px;
+  }
+
+  .content-compte-payant-title{
+    margin-bottom: 40px;
+  }
+}

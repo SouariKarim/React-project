@@ -1,0 +1,24 @@
+@import "src/theme-jean-michel/theme-jean-michel";
+
+
+.summaries{
+  display: flex;
+  flex-direction: column;
+
+  .summary{
+    border: 1px solid rgba($dark, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: $default-border-radius;
+
+    .highlight-text{
+      font-size: 14px;
+      color: #2C343F;
+    }
+
+    .show-more{
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+  }
+}

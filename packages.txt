@@ -1,0 +1,27 @@
+react-router-dom
+react-ga
+react-helmet
+moment
+bootstrap
+react-bootstrap
+formik
+yup
+react-spinners
+@fortawesome/free-solid-svg-icons @fortawseome/free-regular-svg-icons  it is with r fort not fontawesome
+@fortawsome/react-fontawesome
+rooks
+axios
+query-string
+js-cookies
+react-hot-toast
+body-scroll-lock
+react-konami-code
+classnames/bind
+framer-motion
+uuid
+react-copy-to-clipboard
+react-range
+react-switch
+react-countup
+
+//@emotion/react for react-spinners

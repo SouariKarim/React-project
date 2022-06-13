@@ -1,0 +1,68 @@
+@use "sass:math";
+@import 'theme-jean-michel-colors';
+
+$small-border-radius: 4px;
+$default-border-radius: 6px;
+$large-border-radius: 9px;
+
+$default-box-shadow: 0 0 10px rgba($dark, 0.1);
+
+pre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html, body, #root {
+  background-color: $body-bg;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  .flex-column-100 {
+    min-height: 100% !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .root-expand {
+    flex: 1 0 auto;
+  }
+
+  .modal {
+    z-index: 2000;
+  }
+
+  .justify-content-evenly {
+    justify-content: space-evenly;
+  }
+
+  .shortcut {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.1em 0.5em;
+    margin: 0 0.2em;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    background-color: #f7f7f7;
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+
+    .form-control {
+      background-color: white !important;
+    }
+  }
+}

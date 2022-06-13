@@ -1,0 +1,26 @@
+@import "../../../theme-jean-michel/theme-jean-michel";
+
+
+.socialContainer {
+  .warning {
+    margin-top: 30px;
+    font-size: 16px;
+
+    svg {
+      margin-right: 7px;
+    }
+  }
+
+  .notation {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .comments {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+
+  }
+}

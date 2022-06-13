@@ -1,0 +1,58 @@
+@import "../../../theme-jean-michel/theme-jean-michel";
+
+
+.container {
+  width: 100%;
+  height: 27px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .trackWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+
+    .track {
+      width: 100%;
+      height: 4px;
+      border-radius: 0.3rem;
+      align-self: center;
+      transition: background 250ms;
+      cursor: pointer;
+    }
+
+    &.isDragged {
+      cursor: grabbing;
+    }
+  }
+
+  .thumb {
+    background: $dark;
+    border: none;
+    width: 50px;
+    height: 100%;
+    border-radius: $default-border-radius;
+    box-shadow: $default-box-shadow;
+    cursor: grab;
+    outline: none;
+    touch-action: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 250ms;
+
+    &.isDragged {
+      cursor: grabbing;
+    }
+
+    &.hasChanged {
+      background: $yellow;
+    }
+  }
+}

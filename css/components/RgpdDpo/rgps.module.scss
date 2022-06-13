@@ -1,0 +1,143 @@
+@import "../../theme-jean-michel/theme-jean-michel";
+
+
+.container {
+  padding: 0 8% 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .jeanMichelText {
+    max-width: 950px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 35px;
+
+    :global(.btn) {
+      font-size: 20px;
+      color: $yellow;
+      font-weight: 400;
+      margin: 0;
+      padding: 0 0 2px;
+      text-decoration: underline;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    a {
+      white-space: nowrap;
+      color: $yellow;
+      font-weight: 400;
+      transition: color 250ms;
+
+      &:hover {
+        text-decoration: underline !important;
+        color: $orange;
+      }
+    }
+  }
+
+  .secondaryTitle {
+    margin-top: 40px;
+  }
+
+  .sourcesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid $gray;
+    border-radius: $default-border-radius;
+    margin: 20px 0 60px;
+
+    .sources {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .source {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 120px;
+        box-shadow: $default-box-shadow;
+        margin: 0 30px 30px;
+        border-top-left-radius: $default-border-radius;
+        border-top-right-radius: $default-border-radius;
+        color: $dark;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 5px solid $yellow;
+      }
+
+      a {
+        transition: color 250ms;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+
+    p, b {
+      color: $yellow;
+      font-weight: 500;
+      margin: 10px 0 0;
+      text-align: center;
+    }
+
+    p {
+      margin: 10px 0 0;
+      font-weight: 300;
+    }
+  }
+
+  .freelanceTitle {
+   margin-top: 60px;
+  }
+
+  .cta {
+    margin: 30px 0 15px;
+  }
+
+  .conditions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+
+    span {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    .jeanMichelText {
+      font-size: 18px;
+
+      :global(.btn) {
+        font-size: 18px;
+      }
+    }
+
+    .secondaryTitle, .freelanceTitle {
+      text-align: center;
+    }
+
+    .cta {
+      font-size: 20px;
+      padding: 8px 30px;
+
+    }
+  }
+}

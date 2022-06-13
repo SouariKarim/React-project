@@ -1,0 +1,54 @@
+@import "src/theme-jean-michel/theme-jean-michel-display";
+
+.toolbox{
+  position: fixed;
+  z-index: 500;
+  bottom: 110px;
+  right: 15px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba($black, 0.15);
+  border-radius: $default-border-radius;
+
+  .icon{
+    color: rgba($black, 0.4);
+    margin: 10px 0 5px;
+  }
+
+  .tool-btn{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, $orange, $yellow 51%, $yellow) 0 / 200%;
+    box-shadow: 0 0 20px rgba(black, 0.3);
+    color: white;
+    margin: 5px 0;
+    border: none;
+    border-radius: $default-border-radius;
+    transition: all 400ms;
+
+    &:hover{
+      transform: rotate(360deg);
+      border-radius: 100%;
+      background: linear-gradient(90deg, $orange, $yellow 51%, $yellow) 100% / 200%;
+    }
+
+    &.active{
+      background: rgba($black, 0.15);
+      box-shadow: none;
+      border-radius: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .toolbox {
+    display: none;
+  }
+}

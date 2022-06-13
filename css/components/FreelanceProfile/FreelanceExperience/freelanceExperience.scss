@@ -1,0 +1,142 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.freelance-experience-bloc {
+
+  h3{
+    margin-bottom: 0 !important;
+    color: $grey-text-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+  }
+
+  .bloc-separator {
+    display: block;
+    content: '';
+    border-bottom: 1px solid var(--warm-gray-30, #e6e9ec);
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .item-separator {
+    display: block;
+    content: '';
+    border-bottom: 1px solid var(--warm-gray-30, #e6e9ec);
+    padding-bottom: 16px;
+  }
+
+  .bloc-data {
+    font-size: 14px;
+  }
+
+  .freelance-position-bloc, .freelance-formation-bloc, .freelance-certification-bloc {
+    padding-top: 40px;
+
+    @include media-breakpoint-up(md) {
+      .bloc-header-data {
+        padding-left: 30px;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .certification-date {
+      margin-top: 0;
+    }
+
+    .certification-deliver-by {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .certification-degree {
+      margin-bottom: 0;
+    }
+
+    .formation-title {
+      margin-bottom:0;
+    }
+
+    .formation-degree {
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 24px;
+      font-size: 16px;
+    }
+
+    .formation-date, .formation-activities{
+      font-size: 12px !important;
+      text-transform: none !important;
+      background-color: inherit !important;
+      text-align: left !important;
+      margin: 5px 0 0 !important;
+      padding: 0 !important;
+      color: #666666 !important;
+      font-weight: 400 !important;
+      line-height: 14px;
+    }
+
+    .formation-description {
+      margin-top: 8px;
+    }
+
+    .freelance-position {
+
+      .position-company-date {
+        margin-top: 0 !important;
+        line-height: 1.5;
+      }
+    }
+
+    .position-roles {
+
+      .description-see-more {
+        .description-see-more-anchor {
+          text-align: right;
+        }
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .position-role:not(.item-separator) {
+        margin-bottom: 24px;
+      }
+
+      .position-role {
+        //    margin-bottom: 25px;
+
+        h3 {
+          color: #5f6368;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 14px !important;
+        }
+
+        h4 {
+          font-size: 12px !important;
+          text-transform: none !important;
+          background-color: inherit !important;
+          text-align: left !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          color: rgb(102, 102, 102) !important;
+          font-weight: 400 !important;
+          margin-top: 5px !important;
+        }
+
+        .position-role-description {
+          white-space: pre-line;
+          font-size: 14px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

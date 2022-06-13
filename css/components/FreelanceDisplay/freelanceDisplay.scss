@@ -1,0 +1,92 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+
+.freelance-display{
+  scroll-behavior: smooth;
+  position: fixed;
+  background-color: rgba($gray, 1);
+  width: 100%;
+  max-height: 100vh;
+  min-height: 100vh;
+  z-index: 500;
+  bottom: 0;
+  left: 0;
+  padding: 30px 0 0 60px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 8px solid $orange;
+  transition: background-color 300ms, visibility 400ms;
+  visibility: hidden;
+
+  .display-control{
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 40px 15px 15px;
+    background-color: $white;
+    box-shadow: 0 5px 10px rgba($black, 0.08);
+    margin: 0 auto 30px;
+
+    p{
+      margin: 0 0 0 30px;
+      color: rgba($black, 0.5);
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+
+  .freelance-profile-wrapper{
+    width: 100%;
+    visibility: visible;
+    transition: opacity 400ms, visibility 400ms;
+    position: relative;
+
+    .decoration{
+      width: 100%;
+      height: 140px;
+      background: linear-gradient(to left, rgba($yellow, 0.8), rgba($orange, 0.8));
+      border: none;
+      position: absolute;
+      top: 70px;
+      z-index: -1;
+      transform: skewY(-4deg);
+      pointer-events: none;
+    }
+  }
+
+  &.loading{
+    background-color: rgba($gray, 0.93);
+
+    .freelance-profile-wrapper{
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  &.transparent{
+    background-color: rgba($black, 0.2);
+
+    .freelance-profile-wrapper{
+      opacity: 0;
+    }
+  }
+}
+
+
+@media (max-width: 1100px){
+  .freelance-display{
+    .display-control{
+      justify-content: center;
+      p{
+        display: none;
+      }
+    }
+  }
+}

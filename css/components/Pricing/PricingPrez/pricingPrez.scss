@@ -1,0 +1,120 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import 'src/theme-jean-michel/theme-jean-michel-colors';
+
+
+.pricing-prez {
+  .toggle-switch-payment {
+    background-color: $switch-check-background;
+  }
+
+  .licence-disclaimer {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    z-index: 10;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  .price-logo {
+    max-width: 58px;
+  }
+
+  .card {
+    max-width: 380px;
+    border-radius: 3px;
+
+    &.main-card {
+      box-shadow: 0 0 50px rgba($black, 0.25);
+      z-index: 10;
+      padding: 50px 3% !important;
+    }
+
+    &.side-card {
+      position: relative;
+      height: min-content;
+      border: 1px solid $border-color;
+      padding: 25px 3% !important;
+    }
+
+    .pricing-prez-title {
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    .pricing-prez-offers {
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 25px 0 !important;
+
+      .main-offer{
+        margin-bottom: 8px;
+        font-weight: 500;
+        opacity: 1;
+
+        sup{
+          margin-left: 5px;
+        }
+      }
+
+      span{
+        font-weight: 300;
+        opacity: 0.9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg{
+          color: $cyan;
+          margin-right: 10px;
+          height: 12px;
+          width: auto;
+        }
+
+        &.not-include-offer{
+          text-decoration: line-through;
+
+          svg{
+            color: $red;
+          }
+        }
+      }
+    }
+
+    .btn {
+      min-width: 70%;
+      font-weight: 700;
+    }
+
+    .further-info {
+      max-width: 90%;
+      font-size: 12px;
+      height: 40px;
+      color: $true-grey-text-color;
+    }
+  }
+
+  .exceptional-offer {
+    font-weight: bold;
+
+    sup {
+      color: $dark;
+      font-weight: bold;
+    }
+  }
+}
+
+
+@include media-breakpoint-down(lg){
+  .pricing-prez {
+    .card {
+      left: unset !important;
+      right: unset !important;
+      border: 1px solid $border-color !important;
+    }
+  }
+}

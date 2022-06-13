@@ -1,0 +1,39 @@
+@import "src/theme-jean-michel/theme-jean-michel-display";
+
+
+.search-input {
+  width: 100%;
+  max-width: 750px;
+  margin: 10px auto 20px;
+
+  .search-btn-col{
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .input-group {
+    border: 1px solid $border-color;
+    border-radius: $default-border-radius;
+
+    .input-group-text {
+      color: $border-color;
+      background-color: $transparent;
+      border: none;
+    }
+
+    input {
+      border: none;
+      min-height: 48px;
+      background-color: white;
+      border-radius: $default-border-radius;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.tooltip-inner {
+  width: max-content;
+  max-width: unset;
+  text-align: left;
+
+  .tooltip-node {
+    max-width: 800px;
+    margin-bottom: 0;
+    background-color: #2C343F;
+    padding: 10px;
+
+    ul{
+      margin: 0;
+      padding: 0 0 0 15px;
+    }
+
+    p{
+      margin: 0;
+      color: white;
+    }
+
+    .example{
+      &::before{
+        content: '<>';
+        margin-right: 5px;
+      }
+
+      color: $cyan !important;
+    }
+
+    .citation{
+      font-weight: 500;
+      margin-left: 10px;
+    }
+  }
+}
+
+.tooltip-html-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

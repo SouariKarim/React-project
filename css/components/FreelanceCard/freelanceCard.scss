@@ -1,0 +1,157 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import 'src/theme-jean-michel/theme-jean-michel-colors';
+
+.tooltip-mobilities {
+  text-transform: capitalize;
+}
+
+.freelance-card {
+  position: relative;
+
+  .freelance-name {
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      margin: 12px 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  .freelance-title {
+    font-weight: bolder;
+    font-size: 18px;
+    color: $blue-box;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0 0.75rem 0 0;
+    -o-text-overflow:ellipsis;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    display: block; //Use for overflow in responsive
+  }
+
+  .freelance-localisation-container {
+    margin: 20px 0;
+
+    .freelance-localisation-info {
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+
+      svg {
+        margin-right: 5px;
+        color: $blue-box;
+      }
+    }
+  }
+
+  .freelance-infos-container {
+    margin-bottom: 1.25rem;
+  }
+
+  .freelance-infos {
+    padding: 1rem 0;
+    margin: 0 10px;
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left: none;
+    border-right: none;
+    border-color: $freelance-grey;
+
+    .freelance-info {
+      text-align: center;
+      color: $dark;
+      position: relative;
+
+      .info-icon-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0; /* Change direction for a different side*/
+        top: 10%;
+        z-index: 100;
+        width: 1px; /* Thickness */
+        height: 80%;
+        background: $freelance-grey; /* Color */
+      }
+
+      &:last-of-type {
+        &:after {
+          background: none !important;
+        }
+      }
+
+      .price-locked-tooltip{
+        color: $freelance-grey !important;
+      }
+
+      .price-locked-icon{
+        transition: color 250ms;
+        cursor: pointer;
+
+        &:hover{
+          color: $freelance-grey;
+        }
+      }
+
+      .title {
+        color: $freelance-grey !important;
+        margin: 5px;
+        font-size: 12px;
+      }
+
+      .no-data {
+        color: $freelance-grey !important;
+      }
+
+      .data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+    }
+
+    .freelance-available {
+      color: #07A260 !important;
+    }
+
+    .freelance-no-available {
+      color: #F71424 !important;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .freelance-infos {
+      border-bottom: none;
+
+      .freelance-info {
+        border-style: solid;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-left: none;
+        border-right: none;
+        border-color: #F4F3F8;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../theme-jean-michel/theme-jean-michel";
+
+
+.container {
+  ul {
+    text-align: left;
+
+    li {
+      margin-bottom: 10px;
+
+      span {
+        font-weight: 700;
+        color: $yellow;
+      }
+    }
+  }
+
+  p {
+    text-align: left;
+    margin: 30px 0;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  :global(.btn) {
+    margin-bottom: 20px;
+  }
+}

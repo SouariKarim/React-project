@@ -1,0 +1,51 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.freelance-skills-bloc {
+  .skills {
+    padding-top: 20px;
+    font-weight: bold;
+  }
+
+  .skill {
+    font-size: 14px;
+    color: $dark-list;
+    margin-bottom: 5px;
+  }
+
+  .cloud-keywords {
+    font-size: 14px;
+    color: rgb(26, 26, 26);
+    line-height: 1.2;
+
+    .highlight-text {
+      margin-bottom: 15px;
+    }
+  }
+
+  .freelance-skills-bloc-separator {
+    margin-top: 15px;
+
+    .bloc-separator {
+      display: block;
+      content: '';
+      border-bottom: 1px solid var(--warm-gray-30, #e6e9ec);
+      margin-top: 5px;
+      //margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 15px;
+      color: rgb(103, 103, 103);
+      font-weight: bold;
+    }
+  }
+
+  .skill-complement{
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

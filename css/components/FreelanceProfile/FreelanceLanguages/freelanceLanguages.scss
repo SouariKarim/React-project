@@ -1,0 +1,25 @@
+
+.empty-languages{
+    margin: 10px 0 0;
+    font-size: 14px;
+  }
+  
+  .freelance-language{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--warm-gray-30, #e6e9ec);
+    font-size: 14px;
+    line-height: 24px;
+  
+    p{
+      margin: 0;
+    }
+  
+    .lang{
+      font-weight: 600;
+  
+    }
+  }

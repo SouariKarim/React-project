@@ -1,0 +1,46 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.freelance-profile {
+  margin-top: 15px;
+}
+
+
+.freelance-navbar {
+  .btn {
+    background-color: inherit;
+    border: none;
+    color: $freelance-text-btn!important;
+    height: 100%;
+
+    &:hover {
+      color: rgba($freelance-text-btn, 0.9)!important;
+    }
+
+    &:active {
+      background-color: inherit!important;
+      border: none;
+      color: $freelance-text-btn!important;
+      box-shadow: none !important;
+    }
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  .button-close {
+    float: right !important;
+    font-size: 24px;
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  .freelance-profile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

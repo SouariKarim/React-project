@@ -1,0 +1,42 @@
+@import "../../../theme-jean-michel/theme-jean-michel";
+
+
+.tooltipRoot {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+  .stars {
+    display: flex;
+    align-items: center;
+    color: $yellow;
+    font-size: 12px;
+    line-height: 12px;
+
+    svg {
+      margin-right: 3px;
+
+      &.disabled {
+        color: $gray-unselected;
+      }
+
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  .comments {
+    position: absolute;
+    right: 0;
+    padding: 0;
+    color: $dark-gray;
+    font-size: 12px;
+    font-weight: bold;
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+}

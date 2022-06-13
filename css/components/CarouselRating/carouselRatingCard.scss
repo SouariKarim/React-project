@@ -1,0 +1,52 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.rating-card {
+  background-color: white !important;
+
+  .quote-mark-icon {
+    color: $grey-text-color !important;
+    font-size: 30px;
+  }
+
+  .quote {
+    width: 100%;
+    min-height: 70px;
+    color: $true-grey-text-color;
+
+    text-align: left;
+    font-style: italic;
+    font-size: 22px;
+  }
+
+  .signature {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+
+    img {
+      margin-right: 15px;
+      height: 56px;
+      width: 56px;
+    }
+
+
+    .signature-text {
+      text-align: left;
+
+      .name {
+        font-weight: bold;
+        font-size: 20px;
+        color: $dark;
+      }
+
+      .work {
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: capitalize;
+        color: $blue-ocean;
+      }
+    }
+  }
+
+
+}

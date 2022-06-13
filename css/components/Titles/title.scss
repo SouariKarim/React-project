@@ -1,0 +1,88 @@
+@import 'src/theme-jean-michel/theme-jean-michel-colors';
+
+
+.custom-title{
+  text-align: center;
+
+  &.main-title{
+    font-size: 40px;
+    line-height: 55px;
+    margin: 60px 0;
+    color: $dark;
+    font-weight: 500;
+
+    &.home-slogan{
+      margin: 40px 0;
+      color: $white;
+      line-height: 70px;
+      font-size: 55px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+  }
+
+  &.secondary-title{
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 700;
+    margin: 80px 0 30px;
+    color: $cyan;
+    text-align: center;
+
+    &.dark{
+      color: $white;
+    }
+  }
+
+  &.text-title{
+    font-size: 25px;
+    font-weight: 400;
+    background: none;
+    text-transform: none;
+    color: $blue-ocean;
+    text-align: left;
+    margin: 0 0 20px;
+  }
+}
+
+
+@media (max-width: 1400px){
+  .custom-title{
+    &.main-title {
+      font-size: 30px;
+      line-height: 45px;
+
+      &.home-slogan{
+        line-height: 50px;
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .custom-title{
+    &.main-title {
+      font-size: 30px;
+      line-height: 45px;
+
+      br{
+        display: none;
+      }
+
+      &.home-slogan{
+        line-height: 40px;
+        font-size: 30px;
+      }
+    }
+
+    &.secondary-title{
+      font-size: 30px;
+      line-height: 45px;
+    }
+
+    &.text-title {
+      font-size: 20px;
+    }
+  }
+}

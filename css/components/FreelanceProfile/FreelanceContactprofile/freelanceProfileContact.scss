@@ -1,0 +1,43 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.freelance-profile-contact {
+  .contact-item {
+    margin-bottom: 5px;
+    display: flex;
+    color: $dark;
+
+    svg, img{
+      margin-top: 4px;
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    .contact-title{
+      white-space: nowrap;
+      font-weight: 700;
+      margin: 0 8px;
+    }
+
+    .phone-item {
+      margin: 0 10px 0 0;
+      width: max-content;
+      background-color: $transparent;
+      border: 2px solid $dark;
+      color: $dark;
+      padding: 1px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    a {
+      color: $blue-ocean;
+      transition: color 150ms;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}

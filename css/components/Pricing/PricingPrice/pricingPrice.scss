@@ -1,0 +1,24 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.pricing-price{
+  .pricing-prez-price {
+    font-size: 20px;
+    font-weight: bold;
+
+    del{
+      color: $dark;
+    }
+
+    span{
+      color: $yellow;
+
+      &.pricing-reduction{
+        color: $yellow;
+
+        sup{
+          color: $dark;
+        }
+      }
+    }
+  }
+}

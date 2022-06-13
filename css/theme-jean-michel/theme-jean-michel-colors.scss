@@ -1,0 +1,64 @@
+// General
+$black: #2C343F;
+$dark: #3C434D;
+$white: white;
+$red: #fc0d49;
+$icon-default-color: #324fa0;
+$gold: gold;
+$orange: #FE7845;
+$yellow: #F9A634;
+$cyan: #00DDD0; // #00DDD0;
+$transparent: rgba(0,0,0,0);
+$green: #28a745;
+
+$sunset-gradient: linear-gradient(40deg, $orange -20%, $yellow);
+
+//
+$primary: #4486f9;
+$primary-text-color: $black;
+$grey-text-color: #4a5668;
+$dark-title: #3e4a5d;
+$dark-list: #383838;
+$blue-ocean: #28639A;
+$blue-box: #2C343F;
+$stars: $gold;
+$gray: #f4f4f4;
+$dark-gray: #C4C4C4;
+$gray-unselected: #E5E5E5;
+
+$h6-color-text: #354256;
+$true-grey-text-color: #8d9197; // need to change grey-text-color-name cause it's blue
+$freelance-text-btn: $dark;
+$freelance-grey:#D8DADF;
+// background
+$bg-freelance-profile-header: #101d47;
+$body-bg: #F7F7F7;
+$bg-jumbotron: #F2FAFC;
+
+// Border
+$border-color: #cdcdcd;
+
+// input
+$radio-button-color: $blue-box;
+$switch-uncheck-background: #B8B8B8;
+$switch-check-background: $blue-box;
+$range-track-color: #2C343F;
+
+$table-th-color: $blue-box;
+
+// Font color
+.text-black {
+  color: $black !important;
+}
+
+.text-body-bg {
+  color: $body-bg !important;
+}
+
+.no-bg-color{
+  background-color: unset !important;
+}
+
+th {
+  color: $table-th-color;
+}

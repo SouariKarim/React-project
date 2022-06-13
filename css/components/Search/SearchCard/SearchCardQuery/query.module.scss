@@ -1,0 +1,51 @@
+@import "../../../../theme-jean-michel/theme-jean-michel";
+
+
+.card {
+  .queryInput {
+    font-size: 20px !important;
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 400;
+      color: $dark-gray;
+    }
+  }
+
+  .suggestion {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: 20px;
+    padding-left: 20px;
+    color: $dark-gray;
+    font-size: 16px;
+
+    :global(.btn) {
+      color: $yellow;
+      font-weight: 500;
+      font-style: italic;
+      text-decoration: underline;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    .suggestion {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .card {
+    .help {
+      display: none !important;
+    }
+  }
+}

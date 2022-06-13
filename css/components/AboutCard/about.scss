@@ -1,0 +1,31 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.about-card{
+  width: 100%;
+  max-width : 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  .icon{
+    width: auto;
+    height: 60px;
+    color: $black;
+  }
+
+  .title{
+    color: $blue-ocean;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .content{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba($black, 0.8);
+  }
+}

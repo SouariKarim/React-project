@@ -1,0 +1,49 @@
+@import "../../../theme-jean-michel/theme-jean-michel";
+
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto 15px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: flex-end;
+
+  .filterBy {
+    display: flex;
+    align-items: center;
+    color: $dark-gray;
+
+    button {
+      width: 130px;
+      cursor: pointer;
+      color: $yellow;
+      border: none;
+      background: none;
+      margin-left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 500;
+      transition: color 200ms;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1700px) {
+  .container{
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container{
+    margin-top: 50px;
+    padding-right: 15px !important;
+  }
+}

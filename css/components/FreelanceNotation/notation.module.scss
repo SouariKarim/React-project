@@ -1,0 +1,14 @@
+@import "../../theme-jean-michel/theme-jean-michel";
+
+
+.freelanceNotation {
+  display: flex;
+  align-items: center;
+
+  h3 {
+    color: $dark;
+    margin: 0 20px 0 0;
+    font-size: 17px;
+    font-weight: 500;
+  }
+}

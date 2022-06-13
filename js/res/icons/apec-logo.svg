@@ -1,0 +1,91 @@
+var _g;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgApecLogo(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 235,
+    height: 235,
+    viewBox: "0 0 235 235",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _g || (_g = /*#__PURE__*/React.createElement("g", {
+    transform: "translate(2363 8)"
+  }, /*#__PURE__*/React.createElement("rect", {
+    width: 235,
+    height: 235,
+    transform: "translate(-2363 -8)",
+    fill: "rgba(255,255,255,0)"
+  }), /*#__PURE__*/React.createElement("g", {
+    transform: "translate(-2348.651 6.25)"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M8.782,0H196.718A8.763,8.763,0,0,1,205.5,8.745V196.755a8.763,8.763,0,0,1-8.782,8.745H8.782A8.763,8.763,0,0,1,0,196.755V8.745A8.763,8.763,0,0,1,8.782,0Z",
+    transform: "translate(0.401)",
+    fill: "currentColor"
+  }), /*#__PURE__*/React.createElement("g", {
+    transform: "translate(28.612 28.573)"
+  }, /*#__PURE__*/React.createElement("g", {
+    transform: "translate(0 0)"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M44.449,6.8,1.8,111.721H27.724l39.3-95.761Z",
+    transform: "translate(-1.8 36.501)",
+    fill: "#fff"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M43.624,4.847,68.988,15.136,28.73,113.221H-.429ZM65.069,16.784,45.274,8.753,4.029,110.221H26.718Z",
+    transform: "translate(-1.8 36.501)",
+    fill: "currentColor"
+  }), /*#__PURE__*/React.createElement("g", {
+    transform: "translate(51.848)"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M30.579,31.577,43.123,63.22,53.158,86.536,74.9,75.711,61.521,44.068h0L43.959,1.6h-27.6L8,22.418Z",
+    transform: "translate(-8 -1.6)",
+    fill: "#fff"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.349.1H44.962L62.9,43.488,76.832,76.425,52.407,88.585,41.729,63.773,29.421,32.726,6.051,23.246Zm27.608,3H17.377L9.949,21.59l21.788,8.839L44.509,62.647l9.4,21.839L72.97,75,60.135,44.641Z",
+    transform: "translate(-8 -1.6)",
+    fill: "currentColor"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M14.5,24.225,30.389,63.362h26.76L36.243,13.4Z",
+    transform: "translate(39.857 84.859)",
+    fill: "#fff"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M37.008,11.343,59.4,64.862H29.379L12.587,23.5ZM54.9,61.862,35.477,15.457,16.413,24.949,31.4,61.862Z",
+    transform: "translate(39.857 84.859)",
+    fill: "currentColor"
+  })), /*#__PURE__*/React.createElement("path", {
+    d: "M76.227,31.577h0L1.8,1.6V27.414L88.771,63.22Z",
+    transform: "translate(-1.8 -1.6)",
+    fill: "#fff"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M.3-.621,77.385,30.426,91.468,65.952.3,28.418Zm74.77,33.35L3.3,3.821V26.409L86.074,60.488Z",
+    transform: "translate(-1.8 -1.6)",
+    fill: "currentColor"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M84.345,6.7l13.38,31.643L75.982,49.168h0L19.116,78.312,4.9,112.453,127.83,52.5V24.187Z",
+    transform: "translate(21.024 35.768)",
+    fill: "#fff"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M81.559,3.963l47.772,19.21V53.436L1.989,115.542,17.943,77.228l57.371-29.4,20.481-10.2ZM126.33,25.2,87.131,9.437l12.525,29.62-23,11.45L20.29,79.4,7.811,109.365l118.519-57.8Z",
+    transform: "translate(21.024 35.768)",
+    fill: "currentColor"
+  })))))));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgApecLogo);
+export default __webpack_public_path__ + "static/media/apec-logo.c0b545f32a9c1097fe439b4939d071ed.svg";
+export { ForwardRef as ReactComponent };

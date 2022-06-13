@@ -1,0 +1,120 @@
+@import "../../../theme-jean-michel/theme-jean-michel";
+
+
+.comment {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  box-shadow: $default-box-shadow;
+  border-radius: $default-border-radius;
+
+  * {
+    opacity: 0.7;
+  }
+
+  &.isAuthor {
+    * {
+      opacity: 1;
+    }
+
+    .header {
+      .author {
+        span {
+          color: $cyan;
+        }
+      }
+    }
+
+    .bottom {
+      .state {
+        svg {
+          color: $cyan;
+        }
+      }
+    }
+  }
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .author {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0;
+
+      span {
+        font-size: 13px;
+        margin-left: 8px;
+        color: $dark;
+        font-weight: 500;
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 13px;
+        height: 13px;
+        padding: 4px;
+        margin-left: 10px;
+        color: $dark;
+        transition: color 200ms;
+        cursor: pointer;
+
+        &.editing {
+          color: $orange;
+        }
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+
+  .text {
+    margin: 10px 0;
+    font-size: 16px;
+    color: rgba($dark, 0.9);
+    white-space: pre-line;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 4px;
+
+    .date {
+      font-size: 12px;
+      color: $dark-gray;
+    }
+
+    .state {
+      display: flex;
+      align-items: center;
+
+      .edited {
+        font-size: 12px;
+        color: $dark-gray;
+        margin-right: 7px;
+      }
+
+      svg {
+        color: $dark;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+}

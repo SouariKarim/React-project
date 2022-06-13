@@ -1,0 +1,29 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+@import "src/theme-jean-michel/theme-jean-michel-font";
+
+.freelance-contact-modal {
+  .modal-header {
+    border: none;
+  }
+
+  .quote {
+    color: $dark;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    p {
+      font-size: 17px;
+    }
+
+    .signature {
+      text-align: right;
+    }
+  }
+
+  .modal-footer {
+    p {
+      color: whitesmoke;
+    }
+  }
+}

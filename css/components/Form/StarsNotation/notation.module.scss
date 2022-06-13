@@ -1,0 +1,47 @@
+@import "../../../theme-jean-michel/theme-jean-michel";
+
+
+.container {
+  width: 140px;
+  display: flex;
+  align-items: center;
+
+  &.disabled {
+    .star {
+      cursor: auto;
+    }
+  }
+
+  &.readOnly {
+    width: auto;
+
+    .star {
+      cursor: auto;
+    }
+  }
+
+  .star {
+    margin-right: 3px;
+    color: $gray-unselected;
+    cursor: pointer;
+    transition: color 100ms;
+    width: 18px;
+    height: 18px;
+
+    &.hovered {
+      color: $dark !important;
+    }
+
+    &.selected {
+      color: $yellow;
+    }
+  }
+
+  .reset {
+    margin-left: 20px;
+    cursor: pointer;
+    color: $black;
+    width: 15px;
+    height: 15px;
+  }
+}

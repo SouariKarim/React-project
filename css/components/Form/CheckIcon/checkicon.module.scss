@@ -1,0 +1,33 @@
+@import "../../../theme-jean-michel/theme-jean-michel";
+
+
+.checkInput {
+  display: flex;
+  align-items: center;
+
+  input {
+    margin: 0;
+    cursor: pointer;
+  }
+}
+
+.checkIcon {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    color: $gray-unselected;
+    transition: color 200ms;
+    margin-right: 7px;
+
+    &.checked {
+      color: $yellow;
+    }
+  }
+}

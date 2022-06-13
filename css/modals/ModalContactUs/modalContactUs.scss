@@ -1,0 +1,44 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.modal-dialog {
+  @media (min-width: 900px) {
+    max-width: 650px;
+  }
+}
+
+.modal-contact-us {
+  .modal-content {
+    justify-content: center;
+    height: 100%;
+
+    p {
+      padding: 1rem 3rem;
+      text-align: center;
+    }
+
+    .message {
+      height: 250px;
+      min-height: 100px;
+      width: 100%;
+    }
+
+    .error-message {
+      color: $red;
+    }
+
+    .phone-contact {
+      margin: 0;
+      color: rgba($dark, 0.8);
+
+      .phone-number {
+        color: $orange;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+}

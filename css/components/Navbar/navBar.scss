@@ -1,0 +1,173 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.custom-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  transition: background-color 300ms;
+
+  &.light{
+    background-color: $white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.06);
+
+    nav{
+      .dropdown-toggle{
+        color: $dark !important;
+      }
+
+      .btn {
+        &.active {
+          color: $yellow;
+
+          &::before{
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            background-color: $yellow;
+            bottom: 20%;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-title {
+    display: flex;
+    align-items: center;
+    padding: 0 30px 0 90px;
+    height: 100%;
+    position: relative;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      transform: skewX(20deg);
+      background-color: white;
+      box-shadow: 5px 0 7px 0 rgba($black, 0.08);
+    }
+
+    h1 {
+      text-transform: uppercase;
+      color: $dark;
+      font-weight: 700;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    img {
+      width: auto;
+      height: 50%;
+    }
+  }
+
+  nav{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-left: auto;
+
+    .dropdown-toggle{
+      font-weight: 500;
+      color: $white !important;
+      margin: 0 10px;
+      transition: color 200ms;
+
+      &:hover{
+        color: $orange !important;
+      }
+    }
+  }
+
+  .burger{
+    margin-left: auto;
+    display: none;
+  }
+}
+
+
+@media(max-width: 1000px){
+  .custom-navbar{
+    padding: 0 30px !important;
+
+    .nav-title {
+      padding: 0 30px 0 60px;
+    }
+
+    &.light{
+      nav{
+        background-color: $white;
+      }
+    }
+
+    nav{
+      width: 260px;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: -260px;
+      visibility: hidden;
+      height: 100vh;
+      background-color: $dark;
+      padding: 50px 0;
+      z-index: 20;
+      box-shadow: 5px 0 30px rgba(0,0,0,0.3);
+      transition: all 300ms ease-in-out;
+
+      .btn{
+        margin-bottom: 10px;
+
+        &.btn-cta {
+          margin-top: 10px;
+        }
+        
+        &.active {
+          &::before {
+            display: none !important;
+          }
+        }
+      }
+
+      &.open{
+        right: 0;
+        visibility: visible;
+      }
+    }
+
+    .subscription-details{
+      display: none;
+    }
+
+    .burger{
+      display: flex;
+    }
+  }
+}
+
+
+
+@media(max-width: 500px) {
+  .custom-navbar {
+    .nav-title {
+      display: none;
+    }
+  }
+}

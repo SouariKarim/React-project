@@ -1,0 +1,41 @@
+.credit-manage {
+    margin-top: 15px;
+  
+    .bloc-title {
+      color: rgb(62, 74, 94) !important;
+      font-weight: bold;
+      font-style: italic;
+    }
+  
+    .bloc-subtitle {
+      font-size: 14px;
+      color: rgb(74, 86, 104);
+    }
+  
+    .bloc-text {
+      font-size: 14px;
+      color: rgb(53, 66, 86) !important;
+    }
+  
+    .bloc-data {
+      font-size: 14px;
+      color: rgb(53, 66, 86) !important;
+      font-weight: bold;
+    }
+  
+    .info-details{
+      opacity: 0.8;
+      font-style: italic;
+  
+      p{
+        margin: 0;
+  
+        &::before{
+          content: '➡';
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  
+  

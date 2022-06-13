@@ -1,0 +1,21 @@
+@import "../../../theme-jean-michel/theme-jean-michel";
+
+
+.checkBox {
+  input {
+    background: none;
+    border-radius: $small-border-radius;
+    border: 1px solid $gray-unselected;
+    transition: all 200ms;
+
+    &:checked {
+      background-color: $yellow !important;
+      color: $white;
+      border: 1px solid $yellow;
+    }
+  }
+}
+
+
+
+

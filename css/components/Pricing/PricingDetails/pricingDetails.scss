@@ -1,0 +1,145 @@
+@import 'src/theme-jean-michel/theme-jean-michel';
+
+
+.pricing-details {
+  text-align: center;
+  overflow: auto;
+  position: relative;
+
+  thead, tbody {
+    border: none !important;
+  }
+
+  .scroll-indicator {
+    max-width: 250px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 100px;
+    left: 90px;
+    color: rgba($black, 0.8);
+
+    img{
+      transform: rotate(-90deg);
+      width: 40px;
+      height: auto;
+      margin-bottom: 5px;
+    }
+  }
+
+  .price-table-name{
+    border-bottom: 2px solid rgba($dark, 0.5) !important;
+
+    &::after {
+      display: block;
+      content: '';
+      height: 15px;
+    }
+  }
+
+  .price-table-cvtheque{
+    &::before {
+      display: block;
+      content: '';
+      height: 15px;
+    }
+  }
+
+  .pricing-table-rappel{
+    border-top: 2px solid rgba($dark, 0.5) !important;
+
+    &::before {
+      display: block;
+      content: '';
+      height: 30px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  tr, th {
+    border: none !important;
+  }
+
+  table {
+    white-space: nowrap;
+
+    tr {
+      th {
+        padding: 0.5rem 0.75rem;
+
+        svg {
+          width: 15px;
+          height: 15px;
+        }
+
+        &:nth-child(1) {
+          text-align: left;
+        }
+      }
+    }
+
+    thead {
+      &:nth-child(1) {
+        th {
+          padding: 0;
+        }
+      }
+
+      h3 {
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: $dark;
+      }
+    }
+
+    tbody {
+      font-size: 13px;
+      margin-bottom: 2rem;
+
+      th {
+        font-weight: 400;
+      }
+
+      tr:nth-child(2n+1) {
+        background-color: rgba($dark, 0.03);
+      }
+
+
+      &::after {
+        content: '';
+        display: block;
+        height: 40px;
+      }
+
+      .subscribe-button {
+        max-width: 150px;
+        width: 100%;
+
+        &:disabled{
+          text-decoration: line-through;
+          border: none !important;
+
+          &:hover{
+            background-color: $transparent;
+            color: $dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 700px) {
+  .pricing-details {
+    .scroll-indicator {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../../../theme-jean-michel/theme-jean-michel";
+
+
+.card {
+  .cardContent {
+    height: auto !important;
+    padding: 20px 25px 17px;
+    align-items: flex-start;
+
+    .pertinenceContainer {
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .check {
+        width: 300px;
+        margin-right: 50px;
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 450px) {
+  .card {
+    :global(.check-icon-input) {
+      width: auto !important;
+      margin-right: 0 !important;
+      margin-bottom: 10px !important;
+
+      svg {
+        margin-right: 12px;
+      }
+
+      span {
+        white-space: normal !important;
+        font-size: 14px;
+      }
+    }
+  }
+}

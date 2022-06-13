@@ -1,0 +1,19 @@
+@import "src/theme-jean-michel/theme-jean-michel-colors";
+
+.login-modal {
+  .modal-content {
+    justify-content: center;
+    min-height: 300px;
+
+    .form-error {
+      width: 100%;
+      color: $red;
+      text-align: center;
+      margin-top: 5px;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
