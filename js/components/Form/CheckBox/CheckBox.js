@@ -1,3 +1,5 @@
+// acheckbox component
+
 import React from 'react';
 import classes from "./check.module.scss";
 import {Form} from "react-bootstrap";

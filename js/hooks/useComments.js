@@ -1,39 +1,39 @@
-import useApi from "./useApi";
-
+import useApi from './useApi';
 
 export default function useComments() {
+  const freelancesApi = useApi({ resourceName: 'freelances' }); // the request mthods from the freelances construted url
+  const commentsApi = useApi({ resourceName: 'comments' }); // request methods from the comments constructed url
 
-    const freelancesApi = useApi({resourceName: "freelances"});
-    const commentsApi = useApi({resourceName: "comments"});
+  const getComments = (freelanceId) => {
+    return freelancesApi.get({ url: '/' + freelanceId + '/comments' }); // get the comments based on the freelaceid
+  };
 
+  const createComment = (commentData) => {
+    return freelancesApi.post({
+      url: '/' + commentData.freelanceId + '/comment',
+      json: {
+        text: commentData.text,
+      },
+    }); // created a comment in the freelancer profile
+  };
 
-    const getComments = (freelanceId) => {
-        return freelancesApi.get({url: "/" + freelanceId + "/comments"});
-    }
+  const updateComment = (commentId, newText) => {
+    return commentsApi.patch({
+      url: '/' + commentId,
+      json: {
+        text: newText,
+      },
+    }); // update a comment in the freelancer profile
+  };
 
-    const createComment = (commentData) => {
-        return freelancesApi.post({url: "/" + commentData.freelanceId + "/comment", json: {
-            text: commentData.text,
-        }});
-    }
+  const deleteComment = (commentId) => {
+    return commentsApi.del({ url: '/' + commentId }); // delete a comment in the freelanccer profile
+  };
 
-
-    const updateComment = (commentId, newText) => {
-        return commentsApi.patch({url: "/" + commentId, json: {
-            text: newText,
-        }});
-    }
-
-
-    const deleteComment = (commentId) => {
-        return commentsApi.del({url: "/" + commentId});
-    }
-
-
-    return {
-        getComments,
-        createComment,
-        updateComment,
-        deleteComment
-    }
+  return {
+    getComments,
+    createComment,
+    updateComment,
+    deleteComment,
+  };
 }

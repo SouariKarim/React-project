@@ -1,29 +1,27 @@
-import React, {useState} from "react";
+// user data
 
+import React, { useState } from 'react';
 
-export const UserContext = React.createContext({loggedUser: {}});
+// the context initializetion
+export const UserContext = React.createContext({ loggedUser: {} });
 UserContext.displayName = 'UserContext';
-
+// the context consumer
 export const UserConsumer = UserContext.Consumer;
+// the context provider
+export const UserProvider = ({ children }) => {
+  const [loggedUser, setLoggedUser] = useState(null);
 
-export const UserProvider = ({children}) => {
+  const setUser = (loggedUser) => {
+    setLoggedUser(loggedUser);
+  };
 
-    const [loggedUser, setLoggedUser] = useState(null);
+  const isLogged = () => {
+    return loggedUser !== null && loggedUser !== undefined; // return a boolean
+  };
 
-
-    const setUser = (loggedUser) => {
-        setLoggedUser(loggedUser);
-    };
-
-
-    const isLogged = () => {
-        return loggedUser !== null && loggedUser !== undefined;
-    };
-
-
-    return (
-        <UserContext.Provider value={{loggedUser, isLogged, setUser}}>
-            {children}
-        </UserContext.Provider>
-    );
-}
+  return (
+    <UserContext.Provider value={{ loggedUser, isLogged, setUser }}>
+      {children}
+    </UserContext.Provider>
+  );
+};

@@ -1,3 +1,5 @@
+// getting a joke from the backend an render it in a modal
+
 import Modal, {ModalBody, ModalHeader, ModalTitle} from "../Modal";
 import React, {useContext, useEffect, useState} from "react";
 import {ModalContext} from "../../contexts/ModalContext";
@@ -11,7 +13,7 @@ import JmSpinner from "../../components/JmSpinner/JmSpinner";
 export default function ModalJokes() {
 
     const {isShowingJokes, toggleJokes} = useContext(ModalContext);
-    const {get} = useApi({resourceName: "jokes"})
+    const {get} = useApi({resourceName: "jokes"}) // provide the resource name to construct an url for the backend requests
     const [joke, setJoke] = useState("")
     const [answer, setAnswer] = useState("")
     const [isLoading, setLoading] = useState(false)
@@ -19,7 +21,7 @@ export default function ModalJokes() {
 
     const reloadJokes = () => {
         setLoading(true)
-        get({url: ''})
+        get({url: ''}) // get the joke from the backend
             .then((res) => {
                 setJoke(res.joke)
                 setAnswer(res.answer)

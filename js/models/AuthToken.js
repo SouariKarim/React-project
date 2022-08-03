@@ -1,22 +1,23 @@
-class AuthToken
-{
-    constructor({token, refresh_token, user_id}) {
-        this.token = token;
-        this.refreshToken = refresh_token;
-        this.userId = user_id;
-    }
+// return the token , the refresh token an the user id
 
-    getToken() {
-        return this.token;
-    }
+class AuthToken {
+  constructor({ token, refresh_token, user_id }) {
+    this.token = token;
+    this.refreshToken = refresh_token;
+    this.userId = user_id;
+  }
 
-    getRefreshToken() {
-        return this.refreshToken;
-    }
+  getToken() {
+    return this.token;
+  }
 
-    getUserId() {
-        return this.userId;
-    }
+  getRefreshToken() {
+    return this.refreshToken;
+  }
+
+  getUserId() {
+    return this.userId;
+  }
 }
 
 export default AuthToken;
