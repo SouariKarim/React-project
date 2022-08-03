@@ -1,16 +1,16 @@
-import {Helmet} from "react-helmet";
-import SavedResearch from "../components/SavedResearch/SavedResearch";
+// render the saved search page
 
+import { Helmet } from 'react-helmet';
+import SavedResearch from '../components/SavedResearch/SavedResearch';
 
 export default function SavedResearchPage(props) {
+  return (
+    <>
+      <Helmet>
+        <title>Recherches sauvegardées | Jean-Michel.io</title>
+      </Helmet>
 
-    return(
-        <>
-            <Helmet>
-                <title>Recherches sauvegardées | Jean-Michel.io</title>
-            </Helmet>
-
-            <SavedResearch/>
-        </>
-    )
+      <SavedResearch />
+    </>
+  );
 }

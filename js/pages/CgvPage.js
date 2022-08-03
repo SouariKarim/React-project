@@ -1,16 +1,15 @@
-import {Helmet} from "react-helmet";
-import Cgv from "../components/Cgv/Cgv";
-
+// render the condition generale de vente
+import { Helmet } from 'react-helmet';
+import Cgv from '../components/Cgv/Cgv';
 
 export default function CgvPage(props) {
+  return (
+    <>
+      <Helmet>
+        <title>Conditions générales de vente du site Jean-Michel.io</title>
+      </Helmet>
 
-    return(
-        <>
-            <Helmet>
-                <title>Conditions générales de vente du site Jean-Michel.io</title>
-            </Helmet>
-
-            <Cgv {...props}/>
-        </>
-    )
+      <Cgv {...props} />
+    </>
+  );
 }

@@ -1,49 +1,44 @@
-import useApi from "./useApi";
-import Metric from "../models/Metric";
-
+import useApi from './useApi'; // return premade axios request methods
+import Metric from '../models/Metric'; // return the statestics of this freelace site
 
 const useMetricsApi = () => {
+  const api = useApi({ resourceName: 'metrics' }); // provide a resource name to construct the request methods
 
-    const api = useApi({resourceName: "metrics"});
+  const getFreelancesMetric = ({ cancelToken = null } = {}) => {
+    return api.get({ url: '/freelances', cancelToken }).then((json) => {
+      if (json === null) {
+        return null;
+      }
 
-    const getFreelancesMetric = ({cancelToken = null} = {}) => {
-        return api.get({url: "/freelances", cancelToken}).then((json) => {
-            if (json === null) {
-                return null;
-            }
+      return new Metric(json); // get the metrics and construct an object using the metric model/class
+    });
+  };
 
-            return new Metric(json);
-        });
-    }
+  const getCompaniesMetric = ({ cancelToken = null } = {}) => {
+    return api.get({ url: '/companies', cancelToken }).then((json) => {
+      if (json === null) {
+        return null;
+      }
 
+      return new Metric(json); // get company metric and construct an object using the metric class
+    });
+  };
 
-    const getCompaniesMetric = ({cancelToken = null} = {}) => {
-        return api.get({url: "/companies", cancelToken}).then((json) => {
-            if (json === null) {
-                return null;
-            }
+  const getAllMetrics = ({ cancelToken = null } = {}) => {
+    return api.get({ url: '/', cancelToken }).then((json) => {
+      if (json === null) {
+        return null;
+      }
 
-            return new Metric(json);
-        });
-    }
+      return new Metric(json); // get all metrics freelance and company and construct an object using the metric class
+    });
+  };
 
-
-    const getAllMetrics = ({cancelToken = null} = {}) => {
-        return api.get({url: "/", cancelToken}).then((json) => {
-            if (json === null) {
-                return null;
-            }
-
-            return new Metric(json);
-        });
-    }
-
-
-    return {
-        getFreelancesMetric,
-        getCompaniesMetric,
-        getAllMetrics
-    };
+  return {
+    getFreelancesMetric,
+    getCompaniesMetric,
+    getAllMetrics,
+  };
 };
 
 export default useMetricsApi;

@@ -1,22 +1,24 @@
+// render the footer based on the reduced value : if reduced render only one text and if not render every thing
 import React, {useContext} from 'react';
 import "./Footer.scss";
-import {ModalContext} from '../../contexts/ModalContext';
+import {ModalContext} from '../../contexts/ModalContext'; // get the modalcontext containing the methods for a bunch of modals
 import {Container, Row, Col} from "react-bootstrap";
 import Brand from "../../res/logos/jean-michel-brand-white.svg"
-import Button from "../Buttons/Button";
-import ModalJokes from "../../modals/ModalJokes/ModalJokes";
-import useAuthManager from "../../hooks/useAuthManager";
+import Button from "../Buttons/Button"; // button component
+import ModalJokes from "../../modals/ModalJokes/ModalJokes"; // the joke modal component
+import useAuthManager from "../../hooks/useAuthManager"; // auth methods
 
 
 export default function Footer({ reduced = false }) {
 
 	const { toggleContactUs, toggleRegistration, toggleJokes } = useContext(ModalContext);
-	const { isLogged } = useAuthManager()
+	const { isLogged } = useAuthManager() // check if the user is logged
 
 	return (
 		<>
 			<footer>
 				<Container fluid className={"footer-container"}>
+					{/* if the footer is not reduced render the price an so */}
 					{reduced === false &&
 						<Row className={"footer-top justify-content-center"}>
 							<Col md={12} lg={5} className={"brand-col"}>
@@ -63,7 +65,7 @@ export default function Footer({ reduced = false }) {
 							</Col>
 						</Row>
 					}
-
+{/*  render this anyway */}
 					<Row>
 						<Col className={"footer-bottom"}>
 							© Jean-Michel.io 2019-2022 | Tous droits réservés

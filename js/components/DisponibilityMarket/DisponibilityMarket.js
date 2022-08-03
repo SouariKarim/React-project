@@ -1,3 +1,5 @@
+// render a marker based on the dispobility
+
 import "./DisponibilityMaker.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
@@ -6,9 +8,9 @@ import {
     faTimesCircle
 } from "@fortawesome/free-solid-svg-icons";
 import {faDotCircle} from "@fortawesome/free-regular-svg-icons"
-import useAuthManager from "../../hooks/useAuthManager";
+import useAuthManager from "../../hooks/useAuthManager"; // authentication methods
 import moment from "moment";
-import IconTooltip from "../IconTooltip/IconTooltip";
+import IconTooltip from "../IconTooltip/IconTooltip"; // create a tooltip for the icon
 
 
 const infoMarkerList = [
@@ -42,11 +44,12 @@ export default function DisponibilityMarker({freelance}) {
                 temporalIllustration.push(<span key={"temporal-dot-" + i + 1} className={"temporal-dot"}/>)
             }
 
+            // a list based on the disponibility
             return (
                 <li key={"dispo_" + index} className={"marker"} style={{opacity: (opacity < 0.2)? 0.2 : opacity}}>
                     <div className={"marker-timeline"}>
                         {temporalIllustration}
-                        {getDisponibilityIcon(marker)}
+                        {getDisponibilityIcon(marker)} 
                     </div>
                     <span>{marker.label}</span>
                 </li>
@@ -54,7 +57,7 @@ export default function DisponibilityMarker({freelance}) {
         })
     }
 
-
+// render an icon based on the disponibility
     const getDisponibilityIcon = (marker) => {
         if (marker.code.includes("UNKNOWN")) {
             return <FontAwesomeIcon icon={faQuestionCircle} className={"marker-icon unknown"}/>
