@@ -101,6 +101,7 @@ const MyAccount = () => {
             <Card.Body>
               <Formik
                 initialValues={{
+                  // initial values from the auth user
                   email: user.email,
                   firstName: user.first_name,
                   lastName: user.last_name,

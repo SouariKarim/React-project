@@ -5,9 +5,10 @@ import useAuthManager from './useAuthManager'; // returns the methods of the aut
 const useApi = ({ resourceName }) => {
   const [baseUrl] = useState(process.env.REACT_APP_GODZILLA_API_URL);
   const { getBearerToken } = useAuthManager(); // get the token from the storage
-  const axios = useAxios(); // axios after the interceptor configuration
+  const axios = useAxios(); // axios after the interceptor configuration, addoing the token to the request header if exists
 
-  // return the data of the api url like the protocol , the host , hostname , pathname ... based in the given resource name and construct an url with this resource name to make a call to the backend
+  // return the data of the api url like the protocol , the host , hostname , pathname ... based in the given resource name and construct an url 
+  // with this resource name to make a call to the backend
   const getApiUrl = () => {
     let url = baseUrl;
 
